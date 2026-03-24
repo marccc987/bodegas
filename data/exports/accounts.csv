@@ -1,0 +1,21 @@
+tweet_count,bot_label,username,created_at,community_id,id,is_verified,collected_at,display_name,has_avatar,is_seed,bio,has_bio,location,profile_url,followers_count,avatar_url,following_count,bot_score
+4281,human,ABDELAESPRIELLA,2023-05-01,1,x_abdelaespriella,True,2026-03-24 11:51:12.393305,Abelardo De La Espriella,True,True,Candidato a la Presidencia de Colombia por el movimiento Defensores de la Patria. Padre y Esposo. Patriota. Abogado. Empresario. Firme por la Patria.,True,,https://x.com/ABDELAESPRIELLA,90000,,99,0.12
+0,human,MauricioGomezCO,2011-06-01,1,x_mauriciogomezco,True,2026-03-24 11:51:12.394487,Mauricio Gómez Amín,False,True,Senador de la República de Colombia. Opositor del gobierno de Petro con argumentos y cifras.,True,Colombia,https://x.com/MauricioGomezCO,63000,,445,0.08
+0,human,realsantig,2018-07-01,0,x_realsantig,True,2026-03-24 11:51:12.394538,Santiago Giraldo,False,True,Crítico de los tibios y de la izquierda. Cofundador de la Academia Hispanoamericana de política y cultura,True,"Bogotá, D.C., Colombia",https://x.com/realsantig,129000,,1801,0.0
+0,human,ANIABELLO_R,2009-03-01,0,x_aniabello_r,True,2026-03-24 11:51:12.394575,Ani Abello,False,True,"Abogada, analista política, columnista. Anticomunista #SpacesHost",True,Colombia,https://x.com/ANIABELLO_R,136000,,4022,0.0
+487,suspicious,ADLESinCensura,2024-04-01,2,x_adlesincensura,True,2026-03-24 11:51:12.394606,Abelardo De La Espriella Sin Censura,False,True,Tenemos que defender la patria por la razón o por la fuerza,True,,https://x.com/ADLESinCensura,24000,,8,0.3
+0,human,AdrianaVeterin,2023-03-01,1,x_adrianaveterin,True,2026-03-24 11:51:12.394638,Adriana Martinez,False,True,Doctorando en Psicoterapia. respaldo: @adrianaVeterin2,True,"Miami, FL",https://x.com/AdrianaVeterin,53000,,15400,0.08
+0,human,VincenthRamos,2010-10-01,1,x_vincenthramos,True,2026-03-24 11:51:12.394668,Vincent,False,True,"Soy de derecha, hijo de Dios y amo la Música.",True,,https://x.com/VincenthRamos,15000,,569,0.08
+0,human,VaneDeCol,2009-08-01,0,x_vanedecol,True,2026-03-24 11:51:12.394697,Vane!,False,True,Dios bendice a Colombia,True,Alemania,https://x.com/VaneDeCol,120000,,3861,0.0
+0,human,santiuribedel10,2020-06-01,1,x_santiuribedel10,True,2026-03-24 11:51:12.394727,Santiago Uribe,False,True,Negociador internacional |Especialista en gerencia de marketing |De derecha | Campeón mundial de hilos,True,Medellín,https://x.com/santiuribedel10,74000,,680,0.08
+0,human,EliCrH,2010-09-01,1,x_elicrh,True,2026-03-24 11:51:12.394755,Elizabeth Cardona,False,True,Mamá. Consultora Senior SAP & BPM. MODO CAMPAÑA: Abelardo De La Espriella,True,Colombia,https://x.com/EliCrH,229000,,5409,0.08
+3602,suspicious,defensoresco,2024-08-01,2,x_defensoresco,True,2026-03-24 11:51:12.394783,Defensores de la Patria,False,True,"Defensor de la Patria. Colombia, tu familia, tus amigos, y las generaciones por venir te lo agradecen",True,Colombia,https://x.com/defensoresco,16000,,271,0.2
+3103,human,AbelardoPTE,2020-03-01,2,x_abelardopte,True,2026-03-24 11:51:12.394811,De La Espriella Presidente,False,True,Cuenta de apoyo a quien va a salvar a Colombia Abelardo Presidente 2026,True,Colombia,https://x.com/AbelardoPTE,24000,,200,0.12
+0,human,millanrussy,2021-09-01,0,x_millanrussy,True,2026-03-24 11:51:12.394840,Russy Millán,False,True,"Caleño, 30a | Estudio Economía | Opiniones personales",True,Colombia,https://x.com/millanrussy,99000,,3783,0.0
+0,human,Cana__Triste,2024-09-01,1,x_cana__triste,True,2026-03-24 11:51:12.394870,Andrés Verstappen,False,True,Antiguo habitante de los sótanos del infierno,True,"Mordor, Tierra Media",https://x.com/Cana__Triste,2413000,,373,0.0
+100,human,NelsyGrajal,2024-01-01,1,x_nelsygrajal,False,2026-03-24 11:51:12.396518,,False,False,,False,,,50,,200,0.16
+2000,human,opinocol,2023-01-01,1,x_opinocol,False,2026-03-24 11:51:12.396606,,False,False,,False,,,500,,300,0.16
+500,human,EstefaniaCuar10,2024-01-01,1,x_estefaniacuar10,False,2026-03-24 11:51:12.396649,,False,False,,False,,,100,,400,0.16
+800,human,MuyEnojadoSoy,2023-01-01,1,x_muyenojadosoy,False,2026-03-24 11:51:12.396688,,False,False,,False,,,300,,150,0.16
+200,human,Janita63,2024-01-01,1,x_janita63,False,2026-03-24 11:51:12.396719,,False,False,,False,,,30,,100,0.16
+1500,human,Danielbr,2022-01-01,1,x_danielbr,False,2026-03-24 11:51:12.396747,,False,False,,False,,,200,,300,0.16

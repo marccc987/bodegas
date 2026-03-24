@@ -1,0 +1,631 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-03-24">
+    <creator>NetworkX 3.6.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="19" title="types" type="string" />
+    </attributes>
+    <attributes mode="static" class="node">
+      <attribute id="0" title="username" type="string" />
+      <attribute id="1" title="display_name" type="string" />
+      <attribute id="2" title="followers_count" type="long" />
+      <attribute id="3" title="following_count" type="long" />
+      <attribute id="4" title="tweet_count" type="long" />
+      <attribute id="5" title="created_at" type="string" />
+      <attribute id="6" title="is_verified" type="boolean" />
+      <attribute id="7" title="has_avatar" type="boolean" />
+      <attribute id="8" title="has_bio" type="boolean" />
+      <attribute id="9" title="bot_score" type="string" />
+      <attribute id="10" title="bot_label" type="string" />
+      <attribute id="11" title="community_id" type="long" />
+      <attribute id="12" title="is_seed" type="boolean" />
+      <attribute id="13" title="in_degree" type="long" />
+      <attribute id="14" title="out_degree" type="long" />
+      <attribute id="15" title="pagerank" type="double" />
+      <attribute id="16" title="betweenness" type="double" />
+      <attribute id="17" title="closeness" type="double" />
+      <attribute id="18" title="clustering" type="double" />
+    </attributes>
+    <nodes>
+      <node id="bot_0" label="bot_0">
+        <attvalues>
+          <attvalue for="0" value="usuario20149" />
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="9" />
+          <attvalue for="3" value="1769" />
+          <attvalue for="4" value="15877" />
+          <attvalue for="5" value="2026-02-20 11:12:50.118285" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="false" />
+          <attvalue for="8" value="false" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="0" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="4" />
+          <attvalue for="14" value="5" />
+          <attvalue for="15" value="0.042179738359376315" />
+          <attvalue for="16" value="0.0" />
+          <attvalue for="17" value="0.2857142857142857" />
+          <attvalue for="18" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="bot_1" label="bot_1">
+        <attvalues>
+          <attvalue for="0" value="usuario78956" />
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="5" />
+          <attvalue for="3" value="540" />
+          <attvalue for="4" value="15138" />
+          <attvalue for="5" value="2026-03-11 11:12:50.119768" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="false" />
+          <attvalue for="8" value="false" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="0" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="4" />
+          <attvalue for="14" value="5" />
+          <attvalue for="15" value="0.04719930201157703" />
+          <attvalue for="16" value="0.005494505494505495" />
+          <attvalue for="17" value="0.2857142857142857" />
+          <attvalue for="18" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="bot_2" label="bot_2">
+        <attvalues>
+          <attvalue for="0" value="usuario39199" />
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="14" />
+          <attvalue for="3" value="1777" />
+          <attvalue for="4" value="13357" />
+          <attvalue for="5" value="2026-02-12 11:12:50.119878" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="false" />
+          <attvalue for="8" value="false" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="0" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="4" />
+          <attvalue for="14" value="5" />
+          <attvalue for="15" value="0.04317428645055924" />
+          <attvalue for="16" value="0.023809523809523815" />
+          <attvalue for="17" value="0.2857142857142857" />
+          <attvalue for="18" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="bot_3" label="bot_3">
+        <attvalues>
+          <attvalue for="0" value="usuario37331" />
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="7" />
+          <attvalue for="3" value="1989" />
+          <attvalue for="4" value="11327" />
+          <attvalue for="5" value="2026-03-04 11:12:50.119959" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="false" />
+          <attvalue for="8" value="false" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="0" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="4" />
+          <attvalue for="14" value="5" />
+          <attvalue for="15" value="0.04741993994400235" />
+          <attvalue for="16" value="0.023809523809523815" />
+          <attvalue for="17" value="0.2857142857142857" />
+          <attvalue for="18" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="bot_4" label="bot_4">
+        <attvalues>
+          <attvalue for="0" value="usuario21366" />
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="13" />
+          <attvalue for="3" value="1745" />
+          <attvalue for="4" value="11649" />
+          <attvalue for="5" value="2026-01-26 11:12:50.120030" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="false" />
+          <attvalue for="8" value="false" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="0" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="4" />
+          <attvalue for="14" value="5" />
+          <attvalue for="15" value="0.041909565547892234" />
+          <attvalue for="16" value="0.005494505494505495" />
+          <attvalue for="17" value="0.2857142857142857" />
+          <attvalue for="18" value="1.0" />
+        </attvalues>
+      </node>
+      <node id="human_0" label="human_0">
+        <attvalues>
+          <attvalue for="0" value="persona_real_0" />
+          <attvalue for="1" value="Persona 0" />
+          <attvalue for="2" value="2556" />
+          <attvalue for="3" value="926" />
+          <attvalue for="4" value="4133" />
+          <attvalue for="5" value="2016-10-30 11:12:50.120101" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="0" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="7" />
+          <attvalue for="14" value="5" />
+          <attvalue for="15" value="0.10749778452242195" />
+          <attvalue for="16" value="0.2948717948717949" />
+          <attvalue for="17" value="0.5401785714285714" />
+          <attvalue for="18" value="0.32727272727272727" />
+        </attvalues>
+      </node>
+      <node id="human_1" label="human_1">
+        <attvalues>
+          <attvalue for="0" value="persona_real_1" />
+          <attvalue for="1" value="Persona 1" />
+          <attvalue for="2" value="4580" />
+          <attvalue for="3" value="916" />
+          <attvalue for="4" value="904" />
+          <attvalue for="5" value="2025-03-19 11:12:50.120170" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="3" />
+          <attvalue for="14" value="3" />
+          <attvalue for="15" value="0.08730245836445968" />
+          <attvalue for="16" value="0.057692307692307696" />
+          <attvalue for="17" value="0.3601190476190476" />
+          <attvalue for="18" value="0.6666666666666666" />
+        </attvalues>
+      </node>
+      <node id="human_2" label="human_2">
+        <attvalues>
+          <attvalue for="0" value="persona_real_2" />
+          <attvalue for="1" value="Persona 2" />
+          <attvalue for="2" value="1857" />
+          <attvalue for="3" value="267" />
+          <attvalue for="4" value="1860" />
+          <attvalue for="5" value="2016-12-25 11:12:50.120237" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="2" />
+          <attvalue for="14" value="3" />
+          <attvalue for="15" value="0.06850408482227033" />
+          <attvalue for="16" value="0.057692307692307696" />
+          <attvalue for="17" value="0.41156462585034015" />
+          <attvalue for="18" value="0.6666666666666666" />
+        </attvalues>
+      </node>
+      <node id="human_3" label="human_3">
+        <attvalues>
+          <attvalue for="0" value="persona_real_3" />
+          <attvalue for="1" value="Persona 3" />
+          <attvalue for="2" value="1925" />
+          <attvalue for="3" value="843" />
+          <attvalue for="4" value="1765" />
+          <attvalue for="5" value="2021-08-26 11:12:50.120303" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="3" />
+          <attvalue for="14" value="1" />
+          <attvalue for="15" value="0.07605148634847753" />
+          <attvalue for="16" value="0.02930402930402931" />
+          <attvalue for="17" value="0.44720496894409933" />
+          <attvalue for="18" value="0.6666666666666666" />
+        </attvalues>
+      </node>
+      <node id="human_4" label="human_4">
+        <attvalues>
+          <attvalue for="0" value="persona_real_4" />
+          <attvalue for="1" value="Persona 4" />
+          <attvalue for="2" value="3365" />
+          <attvalue for="3" value="714" />
+          <attvalue for="4" value="3600" />
+          <attvalue for="5" value="2018-08-19 11:12:50.120365" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="2" />
+          <attvalue for="14" value="3" />
+          <attvalue for="15" value="0.06133737489546606" />
+          <attvalue for="16" value="0.0027472527472527475" />
+          <attvalue for="17" value="0.3324175824175824" />
+          <attvalue for="18" value="0.6666666666666666" />
+        </attvalues>
+      </node>
+      <node id="human_5" label="human_5">
+        <attvalues>
+          <attvalue for="0" value="persona_real_5" />
+          <attvalue for="1" value="Persona 5" />
+          <attvalue for="2" value="4520" />
+          <attvalue for="3" value="293" />
+          <attvalue for="4" value="1813" />
+          <attvalue for="5" value="2016-05-04 11:12:50.120429" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="4" />
+          <attvalue for="14" value="0" />
+          <attvalue for="15" value="0.13602492168451913" />
+          <attvalue for="16" value="0.0" />
+          <attvalue for="17" value="0.5487012987012988" />
+          <attvalue for="18" value="0.5" />
+        </attvalues>
+      </node>
+      <node id="human_6" label="human_6">
+        <attvalues>
+          <attvalue for="0" value="persona_real_6" />
+          <attvalue for="1" value="Persona 6" />
+          <attvalue for="2" value="3920" />
+          <attvalue for="3" value="453" />
+          <attvalue for="4" value="2678" />
+          <attvalue for="5" value="2018-06-20 11:12:50.120489" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="2" />
+          <attvalue for="14" value="2" />
+          <attvalue for="15" value="0.053708008663924826" />
+          <attvalue for="16" value="0.0521978021978022" />
+          <attvalue for="17" value="0.43214285714285716" />
+          <attvalue for="18" value="0.8333333333333334" />
+        </attvalues>
+      </node>
+      <node id="human_7" label="human_7">
+        <attvalues>
+          <attvalue for="0" value="persona_real_7" />
+          <attvalue for="1" value="Persona 7" />
+          <attvalue for="2" value="1028" />
+          <attvalue for="3" value="896" />
+          <attvalue for="4" value="4178" />
+          <attvalue for="5" value="2024-07-12 11:12:50.120550" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="1" />
+          <attvalue for="14" value="0" />
+          <attvalue for="15" value="0.03152486930074948" />
+          <attvalue for="16" value="0.0" />
+          <attvalue for="17" value="0.3317972350230414" />
+          <attvalue for="18" value="0" />
+        </attvalues>
+      </node>
+      <node id="human_8" label="human_8">
+        <attvalues>
+          <attvalue for="0" value="persona_real_8" />
+          <attvalue for="1" value="Persona 8" />
+          <attvalue for="2" value="4739" />
+          <attvalue for="3" value="348" />
+          <attvalue for="4" value="2948" />
+          <attvalue for="5" value="2017-02-05 11:12:50.120611" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="2" />
+          <attvalue for="14" value="3" />
+          <attvalue for="15" value="0.04293778214198772" />
+          <attvalue for="16" value="0.0631868131868132" />
+          <attvalue for="17" value="0.3457142857142857" />
+          <attvalue for="18" value="0.6" />
+        </attvalues>
+      </node>
+      <node id="human_9" label="human_9">
+        <attvalues>
+          <attvalue for="0" value="persona_real_9" />
+          <attvalue for="1" value="Persona 9" />
+          <attvalue for="2" value="4398" />
+          <attvalue for="3" value="580" />
+          <attvalue for="4" value="2861" />
+          <attvalue for="5" value="2020-12-23 11:12:50.120673" />
+          <attvalue for="6" value="false" />
+          <attvalue for="7" value="true" />
+          <attvalue for="8" value="true" />
+          <attvalue for="9" value="" />
+          <attvalue for="10" value="" />
+          <attvalue for="11" value="1" />
+          <attvalue for="12" value="true" />
+          <attvalue for="13" value="4" />
+          <attvalue for="14" value="5" />
+          <attvalue for="15" value="0.11322839694231615" />
+          <attvalue for="16" value="0.11172161172161174" />
+          <attvalue for="17" value="0.4548872180451128" />
+          <attvalue for="18" value="0.35714285714285715" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="bot_0" target="bot_1" id="0" weight="10">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_0" target="bot_2" id="1" weight="8">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_0" target="bot_3" id="2" weight="8">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_0" target="bot_4" id="3" weight="8">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_0" target="human_0" id="4" weight="15">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_1" target="bot_0" id="5" weight="3">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_1" target="bot_2" id="6" weight="5">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_1" target="bot_3" id="7" weight="8">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_1" target="bot_4" id="8" weight="3">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_1" target="human_0" id="9" weight="13">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_2" target="bot_0" id="10" weight="3">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_2" target="bot_1" id="11" weight="8">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_2" target="bot_3" id="12" weight="8">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_2" target="bot_4" id="13" weight="5">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_2" target="human_0" id="14" weight="11">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_3" target="bot_0" id="15" weight="6">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_3" target="bot_1" id="16" weight="3">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_3" target="bot_2" id="17" weight="7">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_3" target="bot_4" id="18" weight="6">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_3" target="human_0" id="19" weight="10">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_4" target="bot_0" id="20" weight="9">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_4" target="bot_1" id="21" weight="9">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_4" target="bot_2" id="22" weight="3">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_4" target="bot_3" id="23" weight="4">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="bot_4" target="human_0" id="24" weight="14">
+        <attvalues>
+          <attvalue for="19" value="retweet" />
+        </attvalues>
+      </edge>
+      <edge source="human_0" target="human_2" id="25" weight="3">
+        <attvalues>
+          <attvalue for="19" value="follows" />
+        </attvalues>
+      </edge>
+      <edge source="human_0" target="human_3" id="26" weight="1">
+        <attvalues>
+          <attvalue for="19" value="reply" />
+        </attvalues>
+      </edge>
+      <edge source="human_0" target="human_5" id="27" weight="2">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_0" target="human_6" id="28" weight="1">
+        <attvalues>
+          <attvalue for="19" value="reply" />
+        </attvalues>
+      </edge>
+      <edge source="human_0" target="human_9" id="29" weight="2">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_1" target="human_2" id="30" weight="1">
+        <attvalues>
+          <attvalue for="19" value="reply" />
+        </attvalues>
+      </edge>
+      <edge source="human_1" target="human_4" id="31" weight="1">
+        <attvalues>
+          <attvalue for="19" value="reply" />
+        </attvalues>
+      </edge>
+      <edge source="human_1" target="human_9" id="32" weight="2">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_2" target="human_0" id="33" weight="1">
+        <attvalues>
+          <attvalue for="19" value="follows" />
+        </attvalues>
+      </edge>
+      <edge source="human_2" target="human_4" id="34" weight="2">
+        <attvalues>
+          <attvalue for="19" value="follows" />
+        </attvalues>
+      </edge>
+      <edge source="human_2" target="human_9" id="35" weight="2">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_3" target="human_5" id="36" weight="1">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_4" target="human_1" id="37" weight="3">
+        <attvalues>
+          <attvalue for="19" value="follows" />
+        </attvalues>
+      </edge>
+      <edge source="human_4" target="human_5" id="38" weight="3">
+        <attvalues>
+          <attvalue for="19" value="follows" />
+        </attvalues>
+      </edge>
+      <edge source="human_4" target="human_9" id="39" weight="2">
+        <attvalues>
+          <attvalue for="19" value="reply" />
+        </attvalues>
+      </edge>
+      <edge source="human_6" target="human_3" id="40" weight="3">
+        <attvalues>
+          <attvalue for="19" value="reply" />
+        </attvalues>
+      </edge>
+      <edge source="human_6" target="human_8" id="41" weight="1">
+        <attvalues>
+          <attvalue for="19" value="reply" />
+        </attvalues>
+      </edge>
+      <edge source="human_8" target="human_0" id="42" weight="3">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_8" target="human_1" id="43" weight="3">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_8" target="human_3" id="44" weight="3">
+        <attvalues>
+          <attvalue for="19" value="follows" />
+        </attvalues>
+      </edge>
+      <edge source="human_9" target="human_1" id="45" weight="3">
+        <attvalues>
+          <attvalue for="19" value="follows" />
+        </attvalues>
+      </edge>
+      <edge source="human_9" target="human_5" id="46" weight="1">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_9" target="human_6" id="47" weight="2">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_9" target="human_7" id="48" weight="1">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+      <edge source="human_9" target="human_8" id="49" weight="1">
+        <attvalues>
+          <attvalue for="19" value="mention" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

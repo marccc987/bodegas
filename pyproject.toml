@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "bodegas"
+version = "0.1.0"
+description = "Grafo de relacionamiento y detección de bots en X para campañas políticas colombianas"
+authors = ["Camilo Soler"]
+readme = "README.md"
+packages = [{include = "bodegas", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+# X API
+tweepy = "^4.14"
+
+# Database
+sqlmodel = "^0.0.22"
+
+# Graph analysis
+networkx = {version = "^3.4", extras = ["default"]}
+
+# Bot detection / ML
+scikit-learn = "^1.5"
+xgboost = "^2.1"
+pandas = "^2.2"
+numpy = "^1.26"
+
+# Visualization
+pyvis = "^0.3"
+streamlit = "^1.40"
+
+# Configuration / CLI
+pydantic-settings = "^2.6"
+typer = {version = "^0.12", extras = ["all"]}
+python-dotenv = "^1.0"
+
+# Utilities
+tenacity = "^9.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3"
+ruff = "^0.8"
+
+[tool.poetry.scripts]
+bodegas = "bodegas.cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

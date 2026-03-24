@@ -1,0 +1,5 @@
+source_username,target_username,type
+ejemplo1,ejemplo2,follows
+ejemplo1,ejemplo3,retweet
+ejemplo2,ejemplo1,mention
+ejemplo3,ejemplo2,reply
