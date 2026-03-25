@@ -1,10 +1,17 @@
-"""Entry point for Streamlit Cloud."""
-import sys
+"""Entry point for Streamlit Cloud - single page dashboard."""
+import streamlit as st
 from pathlib import Path
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+st.set_page_config(
+    page_title="Bodegas - Red de Cuentas Coordinadas",
+    page_icon="🔍",
+    layout="wide",
+)
 
-from bodegas.viz.dashboard import main
+html_path = Path(__file__).parent / "data" / "exports" / "index.html"
 
-main()
+if html_path.exists():
+    html = html_path.read_text(encoding="utf-8")
+    st.components.v1.html(html, height=900, scrolling=True)
+else:
+    st.error("No se encontró el archivo index.html. Ejecuta build_page.py primero.")
