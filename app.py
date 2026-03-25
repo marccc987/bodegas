@@ -1,4 +1,4 @@
-"""Streamlit dashboard - Red de cuentas sincronizadas."""
+"""Dashboard - Red de cuentas con comportamiento sincronizado."""
 import json
 from pathlib import Path
 
@@ -19,7 +19,7 @@ if not data_path.exists():
     st.stop()
 
 data = json.loads(data_path.read_text(encoding="utf-8"))
-attackers = data["attackers"]
+accounts = data["accounts"]
 stats = data["stats"]
 
 # ---------- Header ----------
@@ -28,8 +28,8 @@ st.markdown(
     <div style='text-align:center; padding: 10px 0 20px;'>
         <h1>🔍 Red de Cuentas con Comportamiento Sincronizado</h1>
         <p style='color:#888; font-size:1.1rem;'>
-            Cuentas en X que responden coordinadamente a múltiples críticos
-            de la campaña presidencial de Abelardo De La Espriella
+            Análisis de cuentas en X que operan de manera coordinada en torno a la campaña
+            presidencial de Abelardo De La Espriella · Colombia 2026
         </p>
     </div>
     """,
@@ -38,53 +38,48 @@ st.markdown(
 
 # ---------- Stats ----------
 c1, c2, c3, c4, c5 = st.columns(5)
-c1.metric("Cuentas analizadas", f"{stats['total_accounts_analyzed']:,}")
-c2.metric("Tweets analizados", f"{stats['total_tweets']:,}")
-c3.metric("Cuentas sincronizadas", f"{stats['total_multi']}")
-c4.metric("Atacan 4 de 5 blancos", f"{stats['multi_4plus']}", delta="alta coordinación", delta_color="inverse")
-c5.metric("Atacan 3 blancos", f"{stats['multi_3']}")
+c1.metric("Cuentas sincronizadas", stats["total_synced"])
+c2.metric("Patrón de actividad idéntica", stats["patron_34"], help="Cuentas con exactamente el mismo número de tweets")
+c3.metric("Comportamiento multi-objetivo", stats["multi_blanco"])
+c4.metric("Conectadas a cuentas semilla", stats["connected_to_seeds"])
+c5.metric("Tweets analizados", f"{stats['total_tweets']:,}")
 
 st.divider()
 
 # ---------- Graph ----------
-st.subheader("Grafo de relaciones entre cuentas sincronizadas")
+st.subheader("Grafo de relaciones con cuentas semilla de campaña")
 st.caption(
-    "Cada nodo es una cuenta. Dos cuentas se conectan si responden a los mismos blancos. "
-    "Las conexiones rojas indican 3 o más blancos en común."
+    "Las cuentas semilla (rojo grande) son las cuentas principales de la campaña. "
+    "Los nodos alrededor son cuentas sincronizadas que interactúan con ellas. "
+    "Haz clic en un nodo para ver detalles."
 )
 
-# Build agraph nodes & edges
 ag_nodes = []
 ag_edges = []
 
 for n in data["nodes"]:
-    color = n.get("color", "#f1c40f")
-    size_val = n.get("size", 20)
-    img = n.get("image")
-
+    img = n.get("image", "")
     ag_nodes.append(
         Node(
             id=n["id"],
             label=n["label"],
-            size=size_val,
-            color=color,
+            size=n.get("size", 20),
+            color=n.get("color", "#3498db"),
             image=img if img else "",
             shape="circularImage" if img else "dot",
-            borderWidth=2,
-            font={"size": 10, "color": "#cccccc"},
+            borderWidth=n.get("borderWidth", 2),
+            font=n.get("font", {"size": 10, "color": "#ccc"}),
             title=n.get("title", ""),
         )
     )
 
 for e in data["edges"]:
-    ecolor = e.get("color", {}).get("color", "#555")
-    width = e.get("width", 1)
     ag_edges.append(
         Edge(
             source=e["from"],
             target=e["to"],
-            color=ecolor,
-            width=width,
+            color=e.get("color", {}).get("color", "#444"),
+            width=e.get("width", 1),
         )
     )
 
@@ -94,14 +89,13 @@ config = Config(
     directed=False,
     physics={
         "barnesHut": {
-            "gravitationalConstant": -5000,
-            "centralGravity": 0.5,
-            "springLength": 150,
+            "gravitationalConstant": -4000,
+            "centralGravity": 0.4,
+            "springLength": 180,
             "damping": 0.3,
         },
         "stabilization": {"iterations": 200},
     },
-    node={"borderWidthSelected": 4},
     backgroundColor="#0d0d1a",
 )
 
@@ -112,46 +106,66 @@ with col_graph:
 
 with col_legend:
     st.markdown("**Nodos**")
-    st.markdown("🔴 Atacan 4+ blancos")
-    st.markdown("🟠 Atacan 3 blancos")
-    st.markdown("🟡 Atacan 2 blancos")
+    st.markdown("🔴 Cuentas semilla de campaña")
+    st.markdown("🟠 Patrón de actividad idéntica")
+    st.markdown("🟡 Alta coordinación")
+    st.markdown("🔵 Coordinación detectada")
     st.markdown("---")
-    st.markdown("**Conexiones**")
-    st.markdown("🔴 3+ blancos compartidos")
-    st.markdown("⚫ 2 blancos compartidos")
-    st.markdown("---")
-    st.markdown("**Blancos monitoreados**")
-    st.markdown("🎯 @CCarrizosaC")
-    st.markdown("🎯 @DiegoASantos")
-    st.markdown("🎯 @ghitis")
-    st.markdown("🎯 @julipalacioc")
-    st.markdown("🎯 @ToroDeArena")
+    st.markdown("**Semillas identificadas**")
+    for s in data.get("seeds", []):
+        st.markdown(f"🎯 @{s['u']}")
 
 st.divider()
 
-# ---------- Table ----------
-st.subheader("Detalle de cuentas sincronizadas")
-st.caption("Cuentas que responden a 2 o más blancos, ordenadas por nivel de coordinación.")
+# ---------- Synchronized accounts list ----------
+st.subheader("Listado de cuentas sincronizadas")
 
-df = pd.DataFrame(attackers)
-df = df.rename(columns={
-    "u": "Cuenta", "tc": "Blancos", "tw": "Replies",
-    "followers": "Followers", "following": "Following",
-    "tweets": "Tweets", "age_days": "Edad (días)",
-    "created": "Creada", "bio": "Bio", "av": "Foto",
-    "targets": "Blancos atacados",
-})
-df["Cuenta"] = df["Cuenta"].apply(lambda x: f"@{x}")
-df["Blancos atacados"] = df["Blancos atacados"].apply(lambda x: ", ".join(x))
-df["Bio"] = df["Bio"].map({True: "✅", False: "❌"})
-df["Foto"] = df["Foto"].map({True: "✅", False: "❌"})
+# Filter controls
+col_f1, col_f2 = st.columns(2)
+with col_f1:
+    group_filter = st.multiselect(
+        "Filtrar por patrón detectado",
+        ["patron_34", "multi_blanco"],
+        default=["patron_34", "multi_blanco"],
+        format_func=lambda x: "Actividad idéntica (34 tweets)" if x == "patron_34" else "Comportamiento multi-objetivo",
+    )
+with col_f2:
+    seed_filter = st.checkbox("Solo cuentas conectadas a semillas", value=False)
 
-st.dataframe(
-    df[["Cuenta", "Blancos", "Blancos atacados", "Followers", "Following",
-        "Tweets", "Edad (días)", "Creada", "Bio", "Foto"]],
-    use_container_width=True,
-    height=500,
-)
+# Build dataframe
+rows = []
+for a in accounts:
+    if not any(g in a["groups"] for g in group_filter):
+        continue
+    if seed_filter and not a["seed_connections"]:
+        continue
+
+    patterns = []
+    if "patron_34" in a["groups"]:
+        patterns.append("Actividad idéntica")
+    if "multi_blanco" in a["groups"]:
+        patterns.append("Multi-objetivo")
+
+    seed_links = ", ".join(
+        [f"@{sc['seed']} ({sc['type']})" for sc in a["seed_connections"]]
+    ) if a["seed_connections"] else "—"
+
+    rows.append({
+        "Cuenta": f"@{a['u']}",
+        "Patrones": " + ".join(patterns),
+        "Conexión a semillas": seed_links,
+        "Followers": a["followers"],
+        "Following": a["following"],
+        "Tweets": a["tweets"],
+        "Edad (días)": a["age_days"],
+        "Creada": a["created"],
+        "Bio": "✅" if a["bio"] else "❌",
+        "Foto": "✅" if a["av"] else "❌",
+    })
+
+df = pd.DataFrame(rows)
+st.dataframe(df, use_container_width=True, height=500)
+st.caption(f"Mostrando {len(df)} de {stats['total_synced']} cuentas sincronizadas")
 
 st.divider()
 
@@ -159,23 +173,26 @@ st.divider()
 st.subheader("Metodología")
 st.markdown(
     """
-1. **Selección de blancos:** Se identificaron 5 cuentas públicas que han expresado críticas
-   o apoyos a la candidata Paloma Valencia y que reciben avalanchas de respuestas negativas
-   asociadas a la campaña de Abelardo De La Espriella.
+1. **Identificación de cuentas semilla:** Se identificaron las cuentas principales
+   asociadas a la campaña presidencial de Abelardo De La Espriella.
 
-2. **Recolección de datos:** Se recolectaron las replies más recientes a cada una de las
-   5 cuentas blanco usando la API oficial de X.
+2. **Detección de actividad sincronizada:** Se detectaron dos patrones principales:
+   - **Actividad idéntica:** Grupo de cuentas con exactamente el mismo número de
+     publicaciones, evidencia de operación automatizada.
+   - **Comportamiento multi-objetivo:** Cuentas que responden de forma coordinada
+     a múltiples cuentas distintas, lo cual es estadísticamente improbable de forma
+     independiente.
 
-3. **Detección de sincronización:** Se cruzaron las listas de cuentas que responden a cada
-   blanco. Las cuentas que aparecen respondiendo a **2 o más blancos distintos** muestran
-   un patrón de comportamiento coordinado.
+3. **Cruce con cuentas semilla:** Se verificó cuáles de las cuentas sincronizadas
+   también interactúan directamente (retweet, mención, respuesta) con las cuentas
+   principales de la campaña.
 
-4. **Grafo de co-ocurrencia:** Dos cuentas se conectan en el grafo si atacan a los mismos
-   blancos. A mayor cantidad de blancos compartidos, más fuerte la evidencia de coordinación.
+4. **Grafo de relaciones:** Se construyó un grafo que muestra las conexiones entre
+   las cuentas sincronizadas y las cuentas semilla de campaña.
 
-> **Nota:** Este análisis identifica patrones de comportamiento sincronizado. Que una cuenta
-> responda a múltiples críticos no prueba que sea un bot, pero la probabilidad de que
-> múltiples cuentas independientes coincidan en atacar exactamente a los mismos 4 de 5
-> blancos es estadísticamente muy baja.
+> **Nota:** Este análisis identifica patrones de comportamiento coordinado basándose
+> en datos públicos. La presencia de un patrón no implica necesariamente automatización,
+> pero la probabilidad de que estas coincidencias ocurran de forma independiente es
+> estadísticamente muy baja.
 """
 )
